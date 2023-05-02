@@ -7,10 +7,10 @@
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        height: 100vh;
+        justify-content: space-evenly;
+        min-height: 100vh;
         background-color: #FEE12B;
         font-size: 2rem;
         font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -47,16 +47,25 @@
         text-shadow: 2px 2px #333333;
       }
       img {
-        max-width: 100%;
+        max-width: 50%;
         height: auto;
+        margin-right: 2rem;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
     </style>
   </head>
   <body>
-    <h1>Dad Joke Generator</h1>
     <img src="cute duck.png" alt="Cartoon Duck" />
-    <div id="dad-joke"></div>
-    <button id="dad-joke-btn">Tell Me Another Joke</button>
+    <div class="container">
+      <h1>Dad Joke Generator</h1>
+      <div id="dad-joke"></div>
+      <button id="dad-joke-btn">Tell Me Another Joke</button>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
